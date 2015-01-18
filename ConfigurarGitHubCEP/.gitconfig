@@ -1,0 +1,5 @@
+[user]
+	name = Sergio Ruiz
+	email = sergio.ruiz.52@gmail.com
+[http]
+	proxy = 192.168.10.4:3128

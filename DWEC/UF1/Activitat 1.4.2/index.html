@@ -1,0 +1,240 @@
+<html>
+    <head>
+        <title> Actividad 1.4.2 </title>
+        <style>
+            body {
+                background-color: burlywood;
+            }
+            #tot {
+                border: 2;
+                border-radius: inherit;
+                border-color: darkgray;
+                border-style: solid;
+                padding: 10px;
+            }
+            #cabecera {
+                text-align: center;
+            }
+            ul, li {
+                font-weight: bold;
+            }
+            p {
+                font-weight: normal;
+            }
+            .botonStyle {
+                    -moz-box-shadow:inset 0px 1px 0px 0px #a6827e;
+                    -webkit-box-shadow:inset 0px 1px 0px 0px #a6827e;
+                    box-shadow:inset 0px 1px 0px 0px #a6827e;
+                    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #7d5d3b), color-stop(1, #634b30));
+                    background:-moz-linear-gradient(top, #7d5d3b 5%, #634b30 100%);
+                    background:-webkit-linear-gradient(top, #7d5d3b 5%, #634b30 100%);
+                    background:-o-linear-gradient(top, #7d5d3b 5%, #634b30 100%);
+                    background:-ms-linear-gradient(top, #7d5d3b 5%, #634b30 100%);
+                    background:linear-gradient(to bottom, #7d5d3b 5%, #634b30 100%);
+                    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#7d5d3b', endColorstr='#634b30',GradientType=0);
+                    background-color:#7d5d3b;
+                    -moz-border-radius:3px;
+                    -webkit-border-radius:3px;
+                    border-radius:3px;
+                    border:1px solid #54381e;
+                    display:inline-block;
+                    cursor:pointer;
+                    color:#ffffff;
+                    font-family:arial;
+                    font-size:13px;
+                    padding:6px 24px;
+                    text-decoration:none;
+                    text-shadow:0px 1px 0px #4d3534;
+            }
+            .botonStyle:hover {
+                    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #634b30), color-stop(1, #7d5d3b));
+                    background:-moz-linear-gradient(top, #634b30 5%, #7d5d3b 100%);
+                    background:-webkit-linear-gradient(top, #634b30 5%, #7d5d3b 100%);
+                    background:-o-linear-gradient(top, #634b30 5%, #7d5d3b 100%);
+                    background:-ms-linear-gradient(top, #634b30 5%, #7d5d3b 100%);
+                    background:linear-gradient(to bottom, #634b30 5%, #7d5d3b 100%);
+                    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#634b30', endColorstr='#7d5d3b',GradientType=0);
+                    background-color:#634b30;
+            }
+            .botonStyle:active {
+                    position:relative;
+                    top:1px;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            function principal()
+            {
+                console.log("Llamo a segunda() desde principal()");
+                segunda();
+                console.log("Acabo de llamar a segunda desde principal()");
+            }
+            function primera ()
+            {
+                //Random de 1 a 2
+                var num = Math.floor((Math.random() * 2) + 1);
+                console.log("Llamo a segunda() o tercera() desde primera");
+                if (num === 1)
+                    {
+                        segunda();
+                        console.log("Acabo de llamar a segunda() desde primera()");
+                    }
+                else
+                    {
+                        tercera();
+                        console.log("Acabo de llamar a tercera() desde primera()");
+                    }
+            }
+            function segunda ()
+            {
+                console.log("   Empieza la ejecución de segunda()");
+                //Si viene de asincrona() se ejecuta el codigo
+                if (contador === 1) 
+                    {
+                        console.log("   *Preparo el lanzamiento de cuarta()");
+                        //Contador a 0 para que no se ejecute si no entra por asincrona()
+                        contador = 0;
+                        setTimeout(function()
+                        {
+                            console.log("Pasan 5 segundos y");
+                            cuarta();
+                        }, 5000);
+                    }
+                console.log("   Entro al bucle llarg()");
+                console.log("   Surto del bucle llarg()");
+                console.log("   Acaba la ejecución de segunda()");
+            }
+            function tercera ()
+            {
+                console.log("   Empieza la ejecución de tercera()");
+                console.log("   Entro al bucle llarg()");
+                console.log("   Surto del bucle llarg()");
+                console.log("   Acaba la ejecución de tercera()");
+            }
+            function cuarta ()
+            {
+                console.log("Empieza la ejecución de cuarta()");
+                console.log("    Se muestra el alert");
+                alert("Han pasado 5 sec.");
+                console.log("Acaba la ejecución de cuarta()");
+            }
+            function clasica()
+            {
+                console.log("Empieza la ejecición de clasica()");
+                console.log("Llamo a segunda() desde clasica()");
+                segunda();
+                console.log("Acabo de llamar a segunda desde clasica()");
+                console.log("Llamo a tercera() desde clasica()");
+                tercera();
+                console.log("Acabo de llamar a tercera desde clasica()");
+                console.log("Acaba la ejecición de clasica()");
+            }
+            function ambCallback(funcioAexecutar)
+            {
+                console.log("Empieza la ejecución de ambCallback()");
+                funcioAexecutar();
+                console.log("Acaba la ejecución de ambCallback()");
+            }
+            var contador = 0;
+            function asincrona(funcioAexecutar)
+            {
+                contador = 1;
+                console.log("Empieza la ejecución de asincrona()");
+                funcioAexecutar();
+                console.log("Acaba la ejecución de asincrona()");
+            }
+            
+            //-----------------------//
+            //Funciones parte opcional
+            //-----------------------//
+            function ambCallbackPruebaOpcional(funcioAexecutar)
+            {
+                console.log("Empieza la ejecución de prueba con bucle pesado");
+                funcioAexecutar();
+            }
+            function buclePesado()
+            {
+                for (i = 0; i < 100000000000000000; i++) { 
+                    console.log(Math.floor((Math.random() * 1000000000000) + 1));
+                }
+            }
+            function asincronaPruebaOpcional(funcioAexecutar)
+            {
+                console.log("Empieza la ejecución de prueba asíncrona con bucle pesado");
+                funcioAexecutar();
+                console.log("Mientras espera lanza un mini bucle");
+                for (i = 0; i < 5; i++) { 
+                    console.log(Math.floor((Math.random() * 1000000000000) + 1));
+                }
+            }
+            function temporizadorPrueba()
+            {
+                console.log("En 10 sec lanza el bucle pesado");
+                setTimeout(function()
+                {
+                    console.log("Bucle pesado en marcha");
+                    buclePesado();
+                }, 10000);
+            }
+            
+        </script>
+        <div id="tot">
+            <div id="cabecera">
+                <h1>Activitat 1.4.2</h1>
+                <button class="botonStyle" onclick="clasica()">Clasica</button>
+                <button class="botonStyle" onclick="ambCallback(primera)">ambCallback</button>
+                <button class="botonStyle" onclick="asincrona(principal)">Asincrona</button>
+                <br/>
+                <button class="botonStyle" onclick="ambCallbackPruebaOpcional(buclePesado)">PruebaCallback</button>
+                <button class="botonStyle" onclick="asincronaPruebaOpcional(temporizadorPrueba)">PruebaAsincrona</button>
+                <button class="botonStyle" onclick="buclePesado()">BuclePesadoDirecto</button>
+                <h5>*S'ha d'observar el log</h5>
+            </div>
+            <hr>
+            <h3> Conclusions:</h3>
+            <h4>La pàgina web ha d'incloure un apartat de conclusions i reflexions.
+                Aquí teniu algunes preguntes que us podeu fer:</h4>
+            <ul type= square>
+                <li>Idees
+                    <ul>
+                        <li>Com ha anat?
+                            <p>Bé, els dos primers sense cap problema i el tercer m'ha costat entendre com fer-ho però finalment ha sortit</p>
+                        <li>S'ha comportat el programa com esperàves? Sí/No? 
+                            <p>Sí, es molt diferent a la programació en Java però ho estem estudiant.</p>
+                        <li>Reflexiona sobre quins avantatges o aplicació pràtica podem trobar per les funcions amb callback.
+                            <p>Doncs l'avantatge més potent que l'hi veig es que es pot decidir/modificar el codi que s'executará mitjançant crides callback, fent que amb condicions, s'executin unes funcions o altres</p>
+                    </ul>
+                <li>Proves opcionals
+                    <ul>
+                        <li>Puc cridar a dues funcions callback dins d'una altra funció?
+                            <p>Sí funcio(call1,call2)</p>
+                        <li>Puc cridar a una funció callback amb paràmetres?
+                            <p>Sí, de la seguent manera:<br>
+                            function prueba (param1, param2) {<br>
+                                alert(param1 + " y " + param2);<br>
+                            }<br>
+                            function callbackTest (callback) {<br>
+                                callback (arguments[1], arguments[2]);<br>
+                            }<br>
+                            callbackTest (prueba, "Hola", "Adios");<br/><br/>
+                            O també:<br/>
+                            function prueba (param1, param2) {<br>
+                                alert(param1 + " y " + param2);<br>
+                            }<br>
+                            function callbackTest (callback, param1, param2) {<br>
+                                callback (param1, param2);<br>
+                            }<br>
+                            callbackTest (prueba, "Hola", "Adios");<br/><br/>
+                            </p>
+                        <li>Mentre s’executa una funció callback amb molt pes de treball, es poden fer altres coses amb la pàgina web? (pots fer un bucle infinit per simular una funció amb molta càrrega de treball)
+                            <p>PruebaCallback: Es pot moure la pàgina amb l'scroll o amb la roda del ratolí, però no es pot seleccionar text ni fer clic en un altre botó de la web</p>
+                        <li>Mentre s’executa una funció assíncrona amb molt pes de treball, es poden fer altres coses amb la pàgina web? (pots fer un bucle infinit per simular una funció amb molta càrrega de treball)
+                            <p>PruebaAsincrona: Doncs passa el mateix problema que l'anterior, mentres espera el timeOut tot bé, però quan s'executa la funcio amb molt de pes es queda penjat</p>
+                        <li>Mentre s’executa una funció clàssica amb molt pes de treball, es poden fer altres coses amb la pàgina web? (pots fer un bucle infinit per simular una funció amb molta càrrega de treball)
+                            <p>BuclePesadoDirecto: Igual que la primera prova</p>
+                    </ul>
+            </ul>
+        </div>
+    </body>
+</html>

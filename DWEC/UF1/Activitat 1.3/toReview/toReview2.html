@@ -1,0 +1,1148 @@
+<html>
+	<style>
+		#nombres{background-color:wheat;}
+	</style>
+<body>
+	<table style="width:100%" border="1">
+		<tr style="    font-size: 20px;    background-color: cornflowerblue;    color: white;">
+			<td>Concepte</td>
+			<td style="width:600px;">Codi Font</td>		
+			<td>Resultat</td>
+		</tr>
+		<tr>
+			<td id="nombres">JS Variables</td>
+			<td>
+				<textarea style="width:100%;height:100PX;">
+<!DOCTYPE html>
+<html>
+<body>
+//COM SUMAR EN JAVASCRIPT I VEURE ELS VALORS I VARIABLES
+	<script>	
+var x = 5;
+var y = 6;
+document.write(x + y + "<br/>");
+document.write(x+"<br/>");
+document.write(y);
+	</script>
+</body>
+</html>
+				</textarea>
+			</td>		
+			<td>	
+				<script>	
+					var x = 5;
+					var y = 6;
+					document.write(x + y + "<br/>");
+					document.write(x+"<br/>");
+					document.write(y);
+				</script>
+			</td>
+		</tr>
+		<tr>
+			<td id="nombres">JS Data Types</td>
+			<td>
+				<textarea style="width:100%;height:100%;">
+<!DOCTYPE html>
+<html>
+<body>
+
+//TIPUS DE COMILLAS QUE PODEM UTILITZAR
+<p id="demo"></p>
+
+<script>
+var carName1 = "Volvo XC60";
+var carName2 = 'Renault Clio';
+var answer1 = "It's alright";
+var answer2 = "He is called 'Johnny'";
+var answer3 = 'He is called "Enric"';
+
+document.getElementById("demo").innerHTML =
+carName1 + "<br>" + 
+carName2 + "<br>" + 
+answer1 + "<br>" + 
+answer2 + "<br>" + 
+answer3;
+</script>
+
+// A LA HORA DE FICAR NUMERICS
+<p id="demo1"></p>
+
+<script>
+var x1 = 34.00;
+var x2 = 34;
+var y = 123e5;
+var z = 123e-5;
+
+document.getElementById("demo1").innerHTML = x1 + "<br>" + x2 + "<br>" + y + "<br>" + z
+</script>
+
+<p id="demo"></p>
+
+//AL FER UNA ARRAY I FER UN FOREACH PER PRINTAR
+<script>
+var cars = ["Saab","Volvo","BMW"];
+
+document.getElementById("demo").innerHTML = cars[0];
+
+cars.forEach(function(entry) {
+    document.write(entry);
+});
+
+</script>
+
+//PER SABER QUIN TIPUS DE VARIABLE ES UTILITZEM EL TYPEOFF
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo3"></p>
+
+<script>
+function myFunction() {
+    document.getElementById("demo3").innerHTML = 
+    typeof "john" + "<br>" + 
+    typeof 3.14 + "<br>" +
+    typeof false + "<br>" +
+    typeof [1,2,3,4] + "<br>" +
+    typeof {name:'john', age:34};
+}
+</script>
+
+//PODEM VEURE ELS VALORS
+<p id="demo6"></p>
+
+<script>
+var person;
+var car = "Volvo";
+var x = null;
+document.getElementById("demo6").innerHTML =
+person + "<br>" + car + "<br>" + x;
+</script>
+
+</body>
+</html>
+				</textarea>
+			</td>		
+			<td>
+				<p id="demo"></p>
+				<script>
+					var carName1 = "Volvo XC60";
+					var carName2 = 'Renault Clio';
+					var answer1 = "It's alright";
+					var answer2 = "He is called 'Johnny'";
+					var answer3 = 'He is called "Enric"';
+
+					document.getElementById("demo").innerHTML =
+					carName1 + "<br>" + 
+					carName2 + "<br>" + 
+					answer1 + "<br>" + 
+					answer2 + "<br>" + 
+					answer3;
+				</script>
+
+				<p id="demo1"></p>
+
+				<script>
+					var x1 = 34.00;
+					var x2 = 34;
+					var y = 123e5;
+					var z = 123e-5;
+
+					document.getElementById("demo1").innerHTML = x1 + "<br>" + x2 + "<br>" + y + "<br>" + z
+				</script>
+
+				<p id="demo2"></p>
+
+				<script>
+					var cars = ["Saab","Volvo","BMW"];
+
+					document.getElementById("demo2").innerHTML = cars[0];
+
+					cars.forEach(function(entry) {
+						document.write(entry);
+					});
+					document.write("</br>");
+				</script>
+
+				<button onclick="myFunction69()">Try it</button>
+
+				<p id="demo3"></p>
+
+				<script>
+					function myFunction69() {
+						document.getElementById("demo3").innerHTML = 
+						typeof "john" + "<br>" + 
+						typeof 3.14 + "<br>" +
+						typeof false + "<br>" +
+						typeof [1,2,3,4] + "<br>" +
+						typeof {name:'john', age:34};
+					}
+				</script>
+
+				<p id="demo6"></p>
+
+				<script>
+					var person;
+					var car = "Volvo";
+					var x = null;
+					document.getElementById("demo6").innerHTML =
+					person + "<br>" + car + "<br>" + x;
+				</script>
+			</td>
+		</tr>
+		<tr>
+			<td id="nombres">JS Objects</td>
+			<td>
+				<textarea style="width:100%;height:250px;">
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Creating a JavaScript Object.</p>
+
+<p id="demo4"></p>
+
+<script>
+var person = {
+    firstName : "John",
+    lastName  : "Doe",
+    age       : 50,
+    eyeColor  : "blue"
+};
+
+document.getElementById("demo4").innerHTML =
+person.firstName + " is " + person.age + " years old.";
+</script>
+<p id="demo5"></p>
+
+<script>
+var person = {firstName:"Enric", lastName:"Arandes", age:21, eyeColor:"blue"};
+
+document.getElementById("demo5").innerHTML =
+person.firstName + " is " + person.age + " years old.";
+</script>
+
+//DEPENENT DE QUAN VAGI A PRINTAR FICO LA FUNCION AMB PARENTISIS
+//O NO EM MOSTRARA EL RETURN O LO QUE FA LA FUNCIO
+<p id="demo7"></p>
+
+<script>
+var person = {
+    firstName: "John",
+    lastName : "Doe",
+    id       : 5566,
+    fullName : function() {
+       return this.firstName + " " + this.lastName;
+    }
+};
+
+document.getElementById("demo7").innerHTML = person.fullName();
+</script>
+
+<p id="demo8"></p>
+
+<script>
+var person = {
+    firstName: "John",
+    lastName : "Doe",
+    id       : 5566,
+    fullName : function() {
+       return this.firstName + " " + this.lastName;
+    }
+};
+
+document.getElementById("demo8").innerHTML = person.fullName;
+</script>
+</body>
+</html>
+				</textarea>
+			</td>
+		<td>
+			<p id="demo4"></p>
+
+			<script>
+				var person = {
+					firstName : "John",
+					lastName  : "Doe",
+					age       : 50,
+					eyeColor  : "blue"
+				};
+
+				document.getElementById("demo4").innerHTML =
+				person.firstName + " is " + person.age + " years old.";
+			</script>
+			<p id="demo5"></p>
+
+			<script>
+				var person = {firstName:"Enric", lastName:"Arandes", age:21, eyeColor:"blue"};
+
+				document.getElementById("demo5").innerHTML =
+				person.firstName + " is " + person.age + " years old.";
+			</script>
+
+			<p id="demo7"></p>
+
+			<script>
+				var person = {
+					firstName: "John",
+					lastName : "Doe",
+					id       : 5566,
+					fullName : function() {
+					   return this.firstName + " " + this.lastName;
+					}
+				};
+
+				document.getElementById("demo7").innerHTML = person.fullName();
+			</script>
+			<p id="demo8"></p>
+
+			<script>
+				var person = {
+					firstName: "John",
+					lastName : "Doe",
+					id       : 5566,
+					fullName : function() {
+					   return "</br>"+this.firstName + "</BR>" + this.lastName;
+					}
+				};
+
+				document.getElementById("demo8").innerHTML = person.fullName;
+			</script>
+		</td>	
+	</tr>
+	<tr>
+		<td id="nombres">JS Functions</td>
+		<td>
+			<textarea style="width:100%;height:200px;">
+<!DOCTYPE html>
+<html>
+<body>
+
+//UTILITZEM UNA FUNCION QUE DEMANA DOS VARIABLES I EL QUE FA ES MULTIPLICAR
+// A PER B
+<p id="demo9"></p>
+
+<script>
+function myFunction(a, b) {
+    return a * b;
+}
+document.getElementById("demo9").innerHTML = myFunction(4, 3);
+</script>
+
+//FEM UNA FUNCIO PER PASSAR ELS GRAUS CELSIUS A FARENHEIT
+<p id="demo10"></p>
+
+<script>
+function toCelcius(f) {
+    return (5/9) * (f-32);
+}
+document.getElementById("demo10").innerHTML = toCelcius(32);
+</script>
+
+
+//UN ALTRE TIPUS DE FUNCIO
+<p id="demo11"></p>
+
+<script>
+document.getElementById("demo11").innerHTML =
+"The temperature is " + toCelsius(32) + " Centigrade";
+
+function toCelsius(fahrenheit) {
+    return (5/9) * (fahrenheit-32);
+} 
+</body>
+</html>
+			</textarea>
+		</td>		
+		<td>
+			<p id="demo9"></p>
+
+			<script>
+				function myFunction(a, b) {
+					return a * b;
+				}
+				document.getElementById("demo9").innerHTML = myFunction(4, 3);
+
+			</script>
+
+			<p id="demo10"></p>
+
+			<script>
+				function toCelcius(f) {
+					return (5/9) * (f-32);
+				}
+				document.getElementById("demo10").innerHTML = toCelcius(32);
+			</script>
+
+			<p id="demo12"></p>
+
+			<script>
+				/*
+				document.getElementById("demo12").innerHTML =
+				"The temperature is " + toCelsius(32) + " Centigrade";
+
+				function toCelsius(fahrenheit) {
+				    return (5/9) * (fahrenheit-32);
+				} 
+				*/
+			</script>
+		</td>
+  </tr>
+  <tr>
+		<td id="nombres">JS Operators</td>
+		<td>
+			<textarea style="width:100%;height:100%;">
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>y = 5, z = 2, calculate x = y + z, and display x:</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    y = 5;
+    z = 2;
+    x = y + z;
+    document.getElementById("demo").innerHTML = x;
+}
+</script>
+
+//DEPENEN ON ESTIGUI EL ++ SI ESTA AL PRINCIPI SUMA AL INSTANT
+//PERO SI ESTA DARRERE TINDRA QUE PASAR UN ALTRE COP PERQUE SUMI
+
+<button onclick="myFunction2()">y++</button>
+<p id="demo14"></p>
+<p id="demo15"></p>
+
+<script>
+function myFunction2() {
+    var y = 5;
+    var x = y++;
+    document.getElementById("demo14").innerHTML = x;
+    document.getElementById("demo15").innerHTML = y;
+}
+</script>
+
+<button onclick="myFunction3()">++y</button>
+<p id="demo16"></p>
+<p id="demo17"></p>
+
+<script>
+
+function myFunction3() {
+    var y = 5;
+    var x = ++y;
+    document.getElementById("demo16").innerHTML = "x " + x;
+    document.getElementById("demo17").innerHTML = "y " + y;
+}
+</script>
+
+//OPERADOR DE DIVISIO
+
+<button onclick="myFunction4()">x /= y // x = x/y</button>
+
+<p id="demo18"></p>
+
+<script>
+function myFunction4() {
+    var x = 10;
+    var y = 5;
+    x /= y;
+    document.getElementById("demo18").innerHTML = x;
+}
+</script>
+
+//COM CONCATENAR EL TEXTOS
+
+<button onclick="myFunction5()">Concatenar texto</button>
+
+<p id="demo19"></p>
+
+<script>
+function myFunction5() {
+    var txt1 = "What a very";
+    var txt2 = "nice day";
+    document.getElementById("demo19").innerHTML = txt1 + " " + txt2;
+}
+</script>
+
+//CONCATENAR EL TEXT AMB NUMEROS
+X= 10 ; Y= 55; Z = Hello5
+
+<button onclick="myFunction6()">textos con numeros</button>
+
+<p id="demo20"></p>
+
+<script>
+function myFunction6() {
+    var x = 5 + 5;
+    var y = "5" + 5;
+    var z = "Hello" + 5;
+
+    document.getElementById("demo20").innerHTML =
+    x + "<br>" +
+    y + "<br>" +
+    z;
+}
+</script>
+
+//VALORS QUE SURTEN DEPENEN DEL QUE FIQUEM STRINGS O INT
+
+<button onclick="myFunction7()">Valores</button>
+
+<p id="demo21"></p>
+
+<script>
+function myFunction7() {
+    var x = 5;
+    var y = "John";
+    document.getElementById("demo21").innerHTML = 
+    typeof x + "<br>" + 
+    typeof 5 + "<br>" +    
+    typeof (5+5) + "<br>" +
+    typeof y + "<br>" + 
+    typeof "5" + "<br>" +
+    typeof "John" + "<br>" +
+    typeof ("John" + " " + "Doe") + "<br>" +
+    typeof false + "<br>" +
+    typeof (5 > 3) + "<br>" +
+    typeof (3 > 5) + "<br>" +    
+    typeof [1,2,3,4] + "<br>" +
+    typeof {name:'john', age:34};
+}
+</script>
+
+//CAMBIAR EL TIPUS DE UNA VARIABLE
+
+<button onclick="myFunction8()">Cambio de tipo</button>
+
+<p id="demo22"></p>
+
+<script>
+function myFunction8() {
+    var y = "5";
+    var x = + y;
+    document.getElementById("demo22").innerHTML =
+    typeof y + "<br>" + typeof x;
+}
+</script>
+</body>
+</html>
+
+			</textarea>
+		</td>		
+		<td>
+			<button onclick="myFunction()">Try it</button>
+			<p id="demo13"></p>
+
+			<script>
+				function myFunction() {
+					y = 5;
+					z = 2;
+					x = y + z;
+					document.getElementById("demo13").innerHTML = x;
+				}
+			</script>
+
+			<button onclick="myFunction2()">y++</button>
+			<p id="demo14"></p>
+			<p id="demo15"></p>
+
+			<script>
+				function myFunction2() {
+					var y = 5;
+					var x = y++;
+					document.getElementById("demo14").innerHTML = "x " + x;
+					document.getElementById("demo15").innerHTML = "y " + y;
+				}
+			</script>
+
+			<button onclick="myFunction3()">++y</button>
+			<p id="demo16"></p>
+			<p id="demo17"></p>
+
+			<script>
+				function myFunction3() {
+					var y = 5;
+					var x = ++y;
+					document.getElementById("demo16").innerHTML = "x " + x;
+					document.getElementById("demo17").innerHTML = "y " + y;
+				}
+			</script>
+
+			<button onclick="myFunction4()">x /= y // x = x/y</button>
+
+			<p id="demo18"></p>
+
+			<script>
+				function myFunction4() {
+					var x = 10;
+					var y = 5;
+					x /= y;
+					document.getElementById("demo18").innerHTML = x;
+				}
+			</script>
+
+			<button onclick="myFunction5()">Concatenar texto</button>
+
+			<p id="demo19"></p>
+
+			<script>
+				function myFunction5() {
+					var txt1 = "What a very";
+					var txt2 = "nice day";
+					document.getElementById("demo19").innerHTML = txt1 + " " + txt2;
+				}
+			</script>
+
+			<button onclick="myFunction6()">textos con numeros</button>
+
+			<p id="demo20"></p>
+
+			<script>
+				function myFunction6() {
+					var x = 5 + 5;
+					var y = "5" + 5;
+					var z = "Hello" + 5;
+
+					document.getElementById("demo20").innerHTML =
+					x + "<br>" +
+					y + "<br>" +
+					z;
+				}
+			</script>
+			<button onclick="myFunction7()">Valores</button>
+
+			<p id="demo21"></p>
+
+			<script>
+				function myFunction7() {
+					var x = 5;
+					var y = "John";
+					document.getElementById("demo21").innerHTML = 
+					typeof x + "<br>" + 
+					typeof 5 + "<br>" +    
+					typeof (5+5) + "<br>" +
+					typeof y + "<br>" + 
+					typeof "5" + "<br>" +
+					typeof "John" + "<br>" +
+					typeof ("John" + " " + "Doe") + "<br>" +
+					typeof false + "<br>" +
+					typeof (5 > 3) + "<br>" +
+					typeof (3 > 5) + "<br>" +    
+					typeof [1,2,3,4] + "<br>" +
+					typeof {name:'john', age:34};
+				}
+			</script>
+			<button onclick="myFunction8()">Cambio de tipo</button>
+
+			<p id="demo22"></p>
+
+			<script>
+				function myFunction8() {
+					var y = "5";
+					var x = + y;
+					document.getElementById("demo22").innerHTML =
+					typeof y + "<br>" + typeof x;
+				}
+			</script>
+		</td>
+	</tr>
+	<tr>
+		<td id="nombres">JS Comparisons</td>
+		<td>
+			<textarea style="width:100%;height:200px;">
+<!DOCTYPE html>
+<html>
+<body>
+
+//COMPARACIO PER SI ES POT VOTAR
+
+<input id="age" value="18" />
+
+<button onclick="myFunction9()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction9() {
+    var age,voteable;
+    age = document.getElementById("age").value;
+    voteable = (age < 18) ? "Too young":"Old enough";
+    document.getElementById("demo").innerHTML = voteable + " to vote.";
+}
+</script>
+
+//COMPARACIO SI ES X ES MES PETIT O IGUAL DE 8
+
+<button onclick="myFunction10()">5<=8</button>
+
+<p id="demo24"></p>
+
+<script>
+function myFunction10() {
+    var x = 5;
+    document.getElementById("demo24").innerHTML = (x <= 8);
+}
+</script>
+</body>
+</html>
+	</textarea>
+	</td>		
+    <td>
+	<input id="age" value="18" />
+
+<button onclick="myFunction11()">Try it</button>
+
+<p id="demo23"></p>
+
+<script>
+function myFunction11() {
+    var age,voteable;
+    age = document.getElementById("age").value;
+    voteable = (age < 18) ? "Too young":"Old enough";
+    document.getElementById("demo23").innerHTML = voteable + " to vote.";
+}
+</script>
+
+<button onclick="myFunction12()">5<=8</button>
+
+<p id="demo24"></p>
+
+<script>
+function myFunction12() {
+    var x = 5;
+    document.getElementById("demo24").innerHTML = (x <= 8);
+}
+</script>
+
+</td>
+  </tr>
+  <tr>
+    <td id="nombres">JS Conditions</td>
+    <td><textarea style="width:100%;height:200px;">
+	
+	<!DOCTYPE html>
+<html>
+<body>
+
+//CONDICIONS DE MANERA SIMPLE IF, ELSE
+
+<button onclick="myFunction50()">Try it</button>
+
+<p id="demo50"></p>
+
+<script>
+function myFunction50() {
+    var greeting;
+    if (new Date().getHours() < 20) {
+        greeting = "Good day";
+    } else {
+        greeting = "Good evening";
+    }
+    document.getElementById("demo50").innerHTML = greeting;
+}
+</script>
+
+//CONDICIONS DE MANERA COMPLEXA IF, ELSE IF, ELSE
+
+<button onclick="myFunction13()">Condiciones hora</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction13() {
+    var greeting;
+    var time = new Date().getHours();
+    if (time < 10) {
+        greeting = "Good morning";
+    } else if (time < 20) {
+        greeting = "Good day";
+    } else {
+        greeting ="Good evening";
+    }
+document.getElementById("demo").innerHTML = greeting;
+}
+</script>
+
+</body>
+</html>
+			</textarea>
+		</td>		
+		<td>
+			<button onclick="myFunction50()">DIA O NOCHE </button>
+
+			<p id="demo50"></p>
+
+			<script>
+				function myFunction50() {
+					var greeting;
+					if (new Date().getHours() < 20) {
+						greeting = "Buenos días";
+					} else {
+						greeting = "Buenas noches";
+					}
+					document.getElementById("demo50").innerHTML = greeting;
+				}
+			</script>
+	
+			<button onclick="myFunction14()">Condiciones hora</button>
+
+			<p id="demo25"></p>
+
+			<script>
+				function myFunction14() {
+					var greeting;
+					var time = new Date().getHours();
+					if (time < 10) {
+						greeting = "Good morning";
+					} else if (time < 20) {
+						greeting = "Good day";
+					} else {
+						greeting ="Good evening";
+					}
+				document.getElementById("demo25").innerHTML = greeting;
+				}
+			</script>
+		</td>
+	</tr>
+	<tr>
+		<td id="nombres">JS Switch</td>
+		<td>
+			<textarea style="width:100%;height:200px;">
+<html>
+<body>
+
+//SWITCH DE MANERA SIMPLE AMB DEFAULT
+
+<button onclick="myFunction70()">QUIN DIA ES?</button>
+
+<p id="demo70"></p>
+
+<script>
+function myFunction70() {
+    var text;
+    switch (new Date().getDay()) {
+        case 6:
+            text = "Today is Saturday";
+            break;
+        case 0:
+            text = "Today is Sunday";
+            break;
+        default:
+            text = "Looking forward to the Weekend";
+    }
+    document.getElementById("demo").innerHTML = text;
+}
+</script>
+
+//SWITCH MÉS COMPLEXE AMB DIFERENTS CASOS
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var text;
+    switch (new Date().getDay()) {
+        case 1:
+        case 2:
+        case 3:
+        default:
+            text = "Looking forward to the Weekend";
+            break;
+        case 4:
+        case 5:
+            text = "Soon it is Weekend";
+            break;
+        case 0:
+        case 6:
+            text = "It is Weekend";
+    }
+    document.getElementById("demo").innerHTML = text;
+}
+</script>
+
+</body>
+</html>
+	
+			</textarea>
+		</td>		
+		<td>
+			<button onclick="myFunction70()">QUIN DIA ES?</button>
+
+			<p id="demo70"></p>
+
+			<script>
+				function myFunction70() {
+					var text;
+					switch (new Date().getDay()) {
+						case 6:
+							text = "Today is Saturday";
+							break;
+						case 0:
+							text = "Today is Sunday";
+							break;
+						default:
+							text = "Looking forward to the Weekend";
+					}
+					document.getElementById("demo70").innerHTML = text;
+				}
+			</script>
+	
+			<button onclick="myFunction15()">Switch</button>
+
+			<p id="demo26"></p>
+
+			<script>
+				function myFunction15() {
+					var text;
+					switch (new Date().getDay()) {
+						case 1:
+						case 2:
+						case 3:
+						default:
+							text = "Looking forward to the Weekend";
+							break;
+						case 4:
+						case 5:
+							text = "Soon it is Weekend";
+							break;
+						case 0:
+						case 6:
+							text = "It is Weekend";
+					}
+					document.getElementById("demo26").innerHTML = text;
+				}
+			</script>	
+		</td>
+	</tr>
+	<tr>
+		<td id="nombres">JS Loop For</td>
+		<td>
+			<textarea style="width:100%;height:100%">
+<!DOCTYPE html>
+<html>
+<body>
+
+//BUCLE BASIC FOR
+	<button onclick="myFunction18()">Try it</button>
+<p id="demo32"></p>
+
+<script>
+function myFunction18() {
+    var text = "";
+    var i;
+    for (i = 0; i < 5; i++) {
+        text += "The number is " + i + "<br>";
+    }
+    document.getElementById("demo32").innerHTML = text;
+}
+</script>
+
+//BUCLE FOR QUE MENTRES VEGI LA LONGITUD DEL ARRAY ANIRA EXECUTANTSE
+<p id="demo31"></p>
+
+<script>
+cars = ["BMW", "Volvo", "Saab", "Ford"];
+var i = 0;
+var len = cars.length;
+var text = "";
+
+for (; i < len; i++) {
+    text += cars[i] + "<br>";
+}
+
+document.getElementById("demo31").innerHTML = text;
+</script>
+
+//BUCLE FOR QUE MENTRES VEGI QUE 
+<p id="demo"></p>
+
+<script>
+var txt = "";
+var person = {fname:"John", lname:"Doe", age:25}; 
+var x;
+for (x in person) {
+    txt += person[x] + " ";
+}
+document.getElementById("demo").innerHTML = txt;
+</script>
+</body>
+</html>
+			</textarea>
+		</td>		
+		<td>		
+			<button onclick="myFunction18()">Try it</button>
+			<p id="demo32"></p>
+
+			<script>
+				function myFunction18() {
+					var text = "";
+					var i;
+					for (i = 0; i < 5; i++) {
+						text += "The number is " + i + "<br>";
+					}
+					document.getElementById("demo32").innerHTML = text;
+				}
+			</script>
+
+			<p id="demo31"></p>
+
+			<script>
+				cars = ["BMW", "Volvo", "Saab", "Ford"];
+				var i = 0;
+				var len = cars.length;
+				var text = "";
+
+				for (; i < len; i++) {
+					text += cars[i] + "<br>";
+				}
+
+				document.getElementById("demo31").innerHTML = text;
+			</script>
+
+			<p id="demo27"></p>
+
+			<script>
+				var txt = "";
+				var person = {fname:"John", lname:"Doe", age:25}; 
+				var x;
+				for (x in person) {
+					txt += person[x] + "</br>";
+				}
+				document.getElementById("demo27").innerHTML = txt;
+			</script>
+
+			<p id="demo33"></p>
+
+			<script>
+				var txt = "";
+				var person = {fname:"John", lname:"Doe", age:25}; 
+				var x;
+				for (x in person) {
+					txt += person[x] + " ";
+				}
+				document.getElementById("demo33").innerHTML = txt;
+			</script>
+		</td>
+	</tr>
+	<tr>
+		<td id="nombres">JS Loop While</td>
+		<td>
+			<textarea style="width:100%;height:100%">
+<!DOCTYPE html>
+<html>
+<body>
+
+// AMB EL WHILE PRIMER MIRA SI LA CONDICIO ES COMPLEIX I DESPRES ENTRA I EXECUTA EL BUCLE FINS QUE ACABI
+<button onclick="myFunction16()">WHILE</button>
+
+<p id="demo29"></p>
+
+<script>
+function myFunction16() {
+    var text = "";
+    var i = 0;
+    while (i < 10) {
+        text += "<br>The number is " + i;
+        i++;
+    }
+    document.getElementById("demo29").innerHTML = text;
+}
+</script>
+
+//AMB EL DO WHILE ENTRA DESDE UN PRINCIPI AL BUCLE I DESPRES MIRA SI LA CONDICIO ES COMPLEIX
+
+<button onclick="myFunction17()">DO WHILE</button>
+
+<p id="demo30"></p>
+
+<script>
+function myFunction17() {
+    var text = ""
+    var i = 0;
+    do {
+        text += "<br>The number is " + i;
+        i++;
+    }
+    while (i < 10)  
+    document.getElementById("demo30").innerHTML = text;
+}
+</script>
+
+
+<p id="demo"></p>
+
+//EL WHILE EL QUE FA ES QUE MENTRES VEGI COTXES ANIRA PRINTAN FINS QUE NO QUEDIN MES COTXES
+<script>
+cars = ["BMW","Volvo","Saab","Ford"];
+var i = 0;
+var text = "";
+while (cars[i]) {
+    text += cars[i] + "<br>";
+    i++;
+}
+document.getElementById("demo").innerHTML = text;
+</script>
+
+</body>
+</html>
+			</textarea>
+		</td>		
+		<td>
+			<button onclick="myFunction16()">WHILE</button>
+
+			<p id="demo29"></p>
+
+			<script>
+				function myFunction16() {
+					var text = "";
+					var i = 0;
+					while (i < 10) {
+						text += "<br>The number is " + i;
+						i++;
+					}
+					document.getElementById("demo29").innerHTML = text;
+				}
+			</script>
+
+
+			<button onclick="myFunction17()">DO WHILE</button>
+
+			<p id="demo30"></p>
+
+			<script>
+				function myFunction17() {
+					var text = ""
+					var i = 0;
+					do {
+						text += "<br>The number is " + i;
+						i++;
+					}
+					while (i < 10)  
+					document.getElementById("demo30").innerHTML = text;
+				}
+			</script>
+	
+			<p id="demo28"></p>
+
+			<script>
+				cars = ["BMW","Volvo","Saab","Ford"];
+				var i = 0;
+				var text = "";
+				while (cars[i]) {
+					text += cars[i] + "<br>";
+					i++;
+				}
+				document.getElementById("demo28").innerHTML = text;
+			</script>	
+		</td>
+	</tr>
+</table>
+</body>
+</html>

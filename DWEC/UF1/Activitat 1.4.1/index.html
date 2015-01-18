@@ -1,0 +1,41 @@
+<html>
+    <head>
+    <title> Activitat 1.4 </title>
+    <style>
+    </style>
+    </head>
+    <body>
+        <input id="num" value="18" />
+        <button onclick="contar()">callback</button>
+        <p id="text"></p>
+        <script>
+            function contar (callback1, callback2)
+            {
+                var num = document.getElementById("num").value;
+                
+                //trabajar aqui con las funciones
+                alert(num);
+            }
+
+            function esPositivo(num1)
+            {
+                var respuesta = false;
+                if( num1 > 0)
+                {
+                    respuesta = true;
+                }
+                return respuesta;
+            }
+            
+            function esNegativo(num1)
+            {
+                var respuesta = false;
+                if( num1 < 0)
+                {
+                    respuesta = true;
+                }
+                return respuesta;
+            }
+        </script>
+    </body>
+</html>

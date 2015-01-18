@@ -1,0 +1,115 @@
+<html>
+    <head>
+        <title> Actividad 1.4.2 </title>
+        <style>
+            body {
+                background-color: burlywood;
+            }
+            #tot {
+                border: 2;
+                border-radius: inherit;
+                border-color: darkgray;
+                border-style: solid;
+                padding: 10px;
+            }
+            #cabecera {
+                text-align: center;
+            }
+            ul, li {
+                font-weight: bold;
+            }
+            p {
+                font-weight: normal;
+            }
+            .botonStyle {
+                -moz-box-shadow:inset 0px 1px 0px 0px #a6827e;
+                -webkit-box-shadow:inset 0px 1px 0px 0px #a6827e;
+                box-shadow:inset 0px 1px 0px 0px #a6827e;
+                background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #7d5d3b), color-stop(1, #634b30));
+                background:-moz-linear-gradient(top, #7d5d3b 5%, #634b30 100%);
+                background:-webkit-linear-gradient(top, #7d5d3b 5%, #634b30 100%);
+                background:-o-linear-gradient(top, #7d5d3b 5%, #634b30 100%);
+                background:-ms-linear-gradient(top, #7d5d3b 5%, #634b30 100%);
+                background:linear-gradient(to bottom, #7d5d3b 5%, #634b30 100%);
+                filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#7d5d3b', endColorstr='#634b30',GradientType=0);
+                background-color:#7d5d3b;
+                -moz-border-radius:3px;
+                -webkit-border-radius:3px;
+                border-radius:3px;
+                border:1px solid #54381e;
+                display:inline-block;
+                cursor:pointer;
+                color:#ffffff;
+                font-family:arial;
+                font-size:13px;
+                padding:6px 24px;
+                text-decoration:none;
+                text-shadow:0px 1px 0px #4d3534;
+            }
+            .botonStyle:hover {
+                background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #634b30), color-stop(1, #7d5d3b));
+                background:-moz-linear-gradient(top, #634b30 5%, #7d5d3b 100%);
+                background:-webkit-linear-gradient(top, #634b30 5%, #7d5d3b 100%);
+                background:-o-linear-gradient(top, #634b30 5%, #7d5d3b 100%);
+                background:-ms-linear-gradient(top, #634b30 5%, #7d5d3b 100%);
+                background:linear-gradient(to bottom, #634b30 5%, #7d5d3b 100%);
+                filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#634b30', endColorstr='#7d5d3b',GradientType=0);
+                background-color:#634b30;
+            }
+            .botonStyle:active {
+                position:relative;
+                top:1px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="cabecera">
+            <h1>Activitat 1.4.3</h1>
+            <button class="botonStyle" onclick="loadImages(sources, main)">Mostrar imágenes</button>
+        </div>
+        <div id="img"> </div>
+
+        <script>
+            function loadImages(sources, callback) {
+                console.log("Cargando imagenes...");
+                var images = [];
+                var loadedImages = 0;
+
+                for(i=0; i<sources.length; i++) {
+                    images[i] = new Image();
+                    images[i].onload = function() {
+                        if(++loadedImages == sources.length) {
+                            console.log("Fin carga imágenes");
+                            alert("Imágenes cargadas");
+                            callback(images);
+                        }
+                    };
+                    images[i].src = sources[i];
+                }
+            }
+            function main(images)
+            {
+                console.log("Mostrando imágenes");
+                var cadena = "";
+                for(i=0; i<5; i++){
+                    var num = Math.floor(Math.random() * 10);
+                    cadena= cadena+ "<IMG SRC=" + images[num].src +" WIDTH=250 HEIGHT=250 BORDER=0>";
+                    console.log("Mostrando: " + images[num].src);
+                }
+                document.getElementById("img").innerHTML= cadena;
+            }
+            var sources = [
+                'img/img1.jpg',
+                'img/img2.jpg',
+                'img/img3.jpg',
+                'img/img4.jpg',
+                'img/img5.jpg',
+                'img/img6.jpg',
+                'img/img7.jpg',
+                'img/img8.jpg',
+                'img/img9.jpg',
+                'img/img10.jpg'
+            ];
+        </script>
+    </body>
+</html>

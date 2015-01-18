@@ -1,0 +1,10 @@
+Añadir al los ARCHIVOS .gitconfig dentro de:
+	Windows 7 -> C:\Users\cep.CEPNET1\AppData\Local\GitHub
+Y dentro de:
+	C:\Users\cep.CEPNET1\.gitconfig (se crea al hacer log)
+Las líneas:
+	[http] proxy = 192.168.10.4:3128
+
+El archivo no existe hasta que te logeas la 1a vez.
+
+OJO: No dejar logeado que se acuerda de una vez para otra!
