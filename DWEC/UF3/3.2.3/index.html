@@ -34,36 +34,262 @@
         <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
         <link rel="stylesheet" href="/resources/demos/style.css">
         
+        <style>
+            body {
+                background-color: gainsboro;
+            }
+            .circuloRojo {
+                    height: 50px;
+                    width: 50px;
+                    border-radius: 100%;
+                    background-color: #FE0000;
+                    display: inline-block;
+                    margin: 15%;
+                }
+            .circuloNaranja {
+                    height: 50px;
+                    width: 50px;
+                    border-radius: 100%;
+                    background-color: #FEC000;
+                    display: inline-block;
+                    margin: 15%;
+                }
+            .circuloAmarillo {
+                    height: 50px;
+                    width: 50px;
+                    border-radius: 100%;
+                    background-color: #FEFE00;
+                    display: inline-block;
+                    margin: 15%;
+                }
+            .circuloVerde {
+                    height: 50px;
+                    width: 50px;
+                    border-radius: 100%;
+                    background-color: #00AF50;
+                    display: inline-block;
+                    margin: 15%;
+                }
+            .circuloAzul {
+                    height: 50px;
+                    width: 50px;
+                    border-radius: 100%;
+                    background-color: #006FBF;
+                    display: inline-block;
+                    margin: 15%;
+                }
+            .circuloLila {
+                    height: 50px;
+                    width: 50px;
+                    border-radius: 100%;
+                    background-color: #70309F;
+                    display: inline-block;
+                    margin: 15%;
+                }
+            
+            .cuadroRojo {
+                    height: 100%;
+                    width: 33%;
+                    background-color: #FE0000;
+                    border-radius: 5px;
+                    display: inline-block;
+                    text-align: left;
+                }
+            .cuadroNaranja {
+                    height: 100%;
+                    width: 33%;
+                    background-color: #FEC000;
+                    border-radius: 5px;
+                    display: inline-block;
+                    text-align: left;
+                }
+            .cuadroAmarillo {
+                    height: 100%;
+                    width: 33%;
+                    background-color: #FEFE00;
+                    border-radius: 5px;
+                    display: inline-block;
+                    text-align: center;
+                }
+            .cuadroVerde {
+                    height: 100%;
+                    width: 33%;
+                    background-color: #00AF50;
+                    border-radius: 5px;
+                    display: inline-block;
+                    text-align: left;
+                }
+            .cuadroAzul {
+                    height: 100%;
+                    width: 33%;
+                    background-color: #006FBF;
+                    border-radius: 5px;
+                    display: inline-block;
+                    text-align: left;
+                }
+            .cuadroLila {
+                    height: 100%;
+                    width: 33%;
+                    background-color: #70309F;
+                    border-radius: 5px;
+                    display: inline-block;
+                    text-align: center;
+                }
+        </style>
     </head>
     <body>
         <div class="container">
             <div class="row clearfix">
-                <div class="col-md-8 column">
+                <div class="col-md-7 column">
                     <h3 class="text-left text-primary">
                         MASTERMIND
                     </h3>
                 </div>
-                <div class="col-md-4 column" id="slider">
+                <div class="col-md-5 column">
+                    Número máximo de intentos/ Número restante de intentos
+                    <div class="col-md-12 column" id="slider">
                     
+                    </div>
                 </div>
             </div>
             <div class="row clearfix">
                 <div class="col-md-12 column">
                     <div class="row clearfix">
                         <div class="col-md-1 column">
+                            <div class="col-md-12 column circuloRojo">
+                            </div>
+                            <div class="row clearfix">
+                                <div class="col-md-2 column cuadroRojo">
+                                    1
+                                </div>
+                                <div class="col-md-2 column cuadroNaranja">
+                                    2
+                                </div>
+                                <div class="col-md-2 column cuadroAmarillo">
+                                    3
+                                </div>
+                            </div>
+                            <div class="row clearfix">
+                                <div class="col-md-2 column cuadroVerde">
+                                    1
+                                </div>
+                                <div class="col-md-2 column cuadroAzul">
+                                    2
+                                </div>
+                                <div class="col-md-2 column cuadroLila">
+                                    3
+                                </div>
+                            </div>
                         </div>
                         <div class="col-md-1 column">
+                            <div class="col-md-12 column circuloAzul">
+                            </div>
+                            <div class="row clearfix">
+                                <div class="col-md-2 column">
+                                    1
+                                </div>
+                                <div class="col-md-2 column">
+                                    2
+                                </div>
+                                <div class="col-md-2 column">
+                                    3
+                                </div>
+                            </div>
+                            <div class="row clearfix">
+                                <div class="col-md-2 column">
+                                    1
+                                </div>
+                                <div class="col-md-2 column">
+                                    2
+                                </div>
+                                <div class="col-md-2 column">
+                                    3
+                                </div>
+                            </div>
                         </div>
                         <div class="col-md-1 column">
+                            <div class="col-md-12 column circuloVerde">
+                            </div>
+                            <div class="row clearfix">
+                                <div class="col-md-2 column">
+                                    1
+                                </div>
+                                <div class="col-md-2 column">
+                                    2
+                                </div>
+                                <div class="col-md-2 column">
+                                    3
+                                </div>
+                            </div>
+                            <div class="row clearfix">
+                                <div class="col-md-2 column">
+                                    1
+                                </div>
+                                <div class="col-md-2 column">
+                                    2
+                                </div>
+                                <div class="col-md-2 column">
+                                    3
+                                </div>
+                            </div>
                         </div>
                         <div class="col-md-1 column">
+                            <div class="col-md-12 column circuloLila">
+                            </div>
+                            <div class="row clearfix">
+                                <div class="col-md-2 column">
+                                    1
+                                </div>
+                                <div class="col-md-2 column">
+                                    2
+                                </div>
+                                <div class="col-md-2 column">
+                                    3
+                                </div>
+                            </div>
+                            <div class="row clearfix">
+                                <div class="col-md-2 column">
+                                    1
+                                </div>
+                                <div class="col-md-2 column">
+                                    2
+                                </div>
+                                <div class="col-md-2 column">
+                                    3
+                                </div>
+                            </div>
                         </div>
                         <div class="col-md-1 column">
+                            <div class="col-md-12 column circuloNaranja">
+                            </div>
+                            <div class="row clearfix">
+                                <div class="col-md-2 column">
+                                    1
+                                </div>
+                                <div class="col-md-2 column">
+                                    2
+                                </div>
+                                <div class="col-md-2 column">
+                                    3
+                                </div>
+                            </div>
+                            <div class="row clearfix">
+                                <div class="col-md-2 column">
+                                    1
+                                </div>
+                                <div class="col-md-2 column">
+                                    2
+                                </div>
+                                <div class="col-md-2 column">
+                                    3
+                                </div>
+                            </div>
                         </div>
                         <div class="col-md-2 column">
+                            0
                         </div>
                         <div class="col-md-5 column">
-                             <button type="button" class="btn btn-primary btn-lg btn-block active">Jugar</button>
+                             <button type="button" class="btn btn-primary btn-lg btn-block active">Empezar a jugar/ Dame pistas</button>
                         </div>
                     </div>
                 </div>
@@ -219,6 +445,7 @@
             </div>
         </div>
         <script>
+            //
             $(function() {
             $( "#slider" ).slider();
             });
