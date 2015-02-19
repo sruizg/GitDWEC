@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en-us" class="no-js">
+    <head>
+        <meta charset="utf-8" />
+        <title>Codebreaker</title>
+        <meta name="viewport" content="width=device-width" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <script src="js/modernizr.js"></script>
+    </head>
+    <body>
+        <section class="compat-message icon-warning critical" id="message-js">
+            <p>Your web browser appears to have JavaScript disabled. Because this game is built with JavaScript, you won't be able to play unless you enable JavaScript for this website.</p>
+        </section>
+        <section class="compat-message icon-warning critical" id="message-old">
+            <p>It looks like you're using an older web browser that isn't able to properly run this game. You will have a better experience if you update your browser or use the latest version of <a href="http://www.mozilla.com/en-US/firefox/">Firefox</a> or <a href="http://www.google.com/chrome">Chrome</a> instead.</p>
+        </section>
+        <section class="compat-message icon-warning" id="message-untested">
+            <p>Your web browser isn't compatible with all of the features used by this game. While the game may still be playable, it hasn't been fully tested in your browser. You will have a better experience if you update your browser or use the latest version of <a href="http://www.mozilla.com/en-US/firefox/">Firefox</a> or <a href="http://www.google.com/chrome">Chrome</a> instead.</p>
+        </section>
+
+        <h1>Codebreaker</h1>
+        <div id="codebreaker_game">
+            <menu type="toolbar" id="main-menu">
+                <li><button class="hide-text icon-wrench" id="pref-button" title="Preferences">Preferences</button></li>
+                <li><button class="hide-text icon-pause" id="pause-button" title="Pause the game">Pause</button></li>
+                <li><button class="hide-text icon-share" id="share-button" title="Share this game">Share</button></li>
+            </menu>
+            <div id="game_board"></div>
+            <div id="color_chooser"></div>
+            <div id="overlay">
+                <div class="dialog" id="preferences">
+                    <h2>Preferences</h2>
+                    <span class="label">Colors:</span>
+                    <ul id="opt_colors">
+                        <li>4</li>
+                        <li>5</li>
+                        <li>6</li>
+                        <li>7</li>
+                        <li>8</li>
+                    </ul>
+                    <span class="label">Holes:</span>
+                    <ul id="opt_length">
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                        <li>6</li>
+                    </ul>
+                    <span class="label">Guesses:</span>
+                    <ul id="opt_guesses">
+                        <li>8</li>
+                        <li>10</li>
+                        <li>12</li>
+                    </ul>
+                    <span class="label" id="repeated_colors">Allow Repeated Colors:</span>
+                    <div class="checkbox">
+                        <div class="checkboxBorder">
+                            <span id="checkmark">&#10003;</span>
+                        </div>
+                    </div>
+                    <span class="button left">Cancel</span>
+                    <span class="button right">Save</span>
+                </div>
+                <div class="dialog" id="win_message">
+                    <h2>You Win!</h2>
+                    <span>It took you:</span>
+                    <span class="stats" id="rounds_to_win"></span>
+                    <span class="stats" id="time_to_win"></span>
+                    <span id="show_more_stats">See More Statistics and Averages</span>
+                    <div id="more_stats">
+                        <h2 id="statisticsHeader">Statistics</h2>
+                        <span id="statsSetup"></span>
+                        <span id="statsRecord"></span>
+                        <span class="stats" id="avg_rounds_to_win"></span>
+                        <span class="stats" id="avg_time_to_win"></span>
+                    </div>
+                    <span class="button left">I'm Done</span>
+                    <span class="button right">Play Again</span>
+                </div>
+                <div class="dialog" id="lose_message">
+                    <h2>You Lose!</h2>
+                    <span>The correct answer was:</span>
+                    <div class="row" id="solution"></div>
+                    <span class="button left">I'm Done</span>
+                    <span class="button right">Play Again</span>
+                </div>
+                <div class="dialog" id="paused">
+                    <h2>Your Game is Paused</h2>
+                    <span class="button">Resume</span>
+                </div>
+                <div class="dialog" id="error">
+                    <h2>Error!</h2>
+                    <p id="errorMessage"></p>
+                    <p id="startNewGame">Maybe you'd like to try a different game instead?</p>
+                    <span class="button">Okay</span>
+                    <span class="button left">No Thanks</span>
+                    <span class="button right">Sure</span>
+                </div>
+                <div class="dialog" id="shareGame">
+                    <h2>Share this Game</h2>
+                    <label for="gameUrl">Link to your current game:</label><br />
+                    <input readonly="readonly" type="text" id="gameUrl" name="gameUrl" />
+                    <span class="button">Continue</span>
+                </div>
+            </div>
+        </div>
+        <p id="copyright">&copy; 2013 <a href="http://www.martinsmucker.com">mlms</a>, <a href="http://creativecommons.org/licenses/by-sa/3.0/">some rights reserved</a></p>
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/jquery-ui.js"></script>
+        <script type="text/javascript" src="js/game.js"></script>
+    </body>
+</html>
