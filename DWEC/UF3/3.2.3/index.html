@@ -38,103 +38,73 @@
             body {
                 background-color: gainsboro;
             }
-            .circuloRojo {
-                    height: 50px;
-                    width: 50px;
-                    border-radius: 100%;
-                    background-color: #FE0000;
-                    display: inline-block;
-                    margin: 15%;
-                }
-            .circuloNaranja {
-                    height: 50px;
-                    width: 50px;
-                    border-radius: 100%;
-                    background-color: #FEC000;
-                    display: inline-block;
-                    margin: 15%;
-                }
-            .circuloAmarillo {
-                    height: 50px;
-                    width: 50px;
-                    border-radius: 100%;
-                    background-color: #FEFE00;
-                    display: inline-block;
-                    margin: 15%;
-                }
-            .circuloVerde {
-                    height: 50px;
-                    width: 50px;
-                    border-radius: 100%;
-                    background-color: #00AF50;
-                    display: inline-block;
-                    margin: 15%;
-                }
-            .circuloAzul {
-                    height: 50px;
-                    width: 50px;
-                    border-radius: 100%;
-                    background-color: #006FBF;
-                    display: inline-block;
-                    margin: 15%;
-                }
-            .circuloLila {
-                    height: 50px;
-                    width: 50px;
-                    border-radius: 100%;
-                    background-color: #70309F;
-                    display: inline-block;
-                    margin: 15%;
-                }
+            .circulo {
+                height: 50px;
+                width: 50px;
+                border-radius: 100%;
+                display: inline-block;
+                border: solid 1px;
+            }
+            .cuadrado {
+                display: inline-block;
+                margin: 1%;
+                padding-left: 5%;
+            }
+            .ok {
+                background-color: #00AF50;
+            }
+            .ko {
+                background-color: #FE0000;
+            }
+            .no {
+                background-color: white;
+            }
+            .I {
+                background-color: #FE0000;
+            }
+            .II {
+                background-color: #FEC000;
+            }
+            .III {
+               background-color: #FEFE00;
+            }
+            .IV {
+                background-color: #00AF50;
+            }
+            .V {
+                background-color: #006FBF;
+            }
+            .VI {
+                background-color: #70309F;
+            }
+            .recuadroGeneral {
+                width: 100%;
+                text-align: center;
+                display: inline-block;
+                border: solid;
+                padding: 1%;
+            }
+            .recuadroNumeros {
+                padding-left: 25%;
+            }
             
-            .cuadroRojo {
-                    height: 100%;
-                    width: 33%;
-                    background-color: #FE0000;
-                    border-radius: 5px;
-                    display: inline-block;
-                    text-align: left;
+            .recuadroNumJugadas {
+                margin-top: 1%;
+                font-size: 400%;
+            }
+            .recuadroNumJugadas2 {
+                margin-bottom: -3%;
+                font-size: 300%;
+            }
+            .recuadroBoton {
+                margin-top: 2.5%;
+            }
+            @media screen and (max-width: 1000px) {
+                .recuadroNumeros {
+                    padding: 0%;
+                    font-size: 100%;
                 }
-            .cuadroNaranja {
-                    height: 100%;
-                    width: 33%;
-                    background-color: #FEC000;
-                    border-radius: 5px;
-                    display: inline-block;
-                    text-align: left;
-                }
-            .cuadroAmarillo {
-                    height: 100%;
-                    width: 33%;
-                    background-color: #FEFE00;
-                    border-radius: 5px;
-                    display: inline-block;
-                    text-align: center;
-                }
-            .cuadroVerde {
-                    height: 100%;
-                    width: 33%;
-                    background-color: #00AF50;
-                    border-radius: 5px;
-                    display: inline-block;
-                    text-align: left;
-                }
-            .cuadroAzul {
-                    height: 100%;
-                    width: 33%;
-                    background-color: #006FBF;
-                    border-radius: 5px;
-                    display: inline-block;
-                    text-align: left;
-                }
-            .cuadroLila {
-                    height: 100%;
-                    width: 33%;
-                    background-color: #70309F;
-                    border-radius: 5px;
-                    display: inline-block;
-                    text-align: center;
-                }
+            }
         </style>
     </head>
     <body>
@@ -148,301 +118,191 @@
                 <div class="col-md-5 column">
                     Número máximo de intentos/ Número restante de intentos
                     <div class="col-md-12 column" id="slider">
-                    
                     </div>
                 </div>
             </div>
-            <div class="row clearfix">
+            <div class="row clearfix recuadroGeneral">
                 <div class="col-md-12 column">
                     <div class="row clearfix">
                         <div class="col-md-1 column">
-                            <div class="col-md-12 column circuloRojo">
+                            <div class="col-md-12 column circulo no">
                             </div>
-                            <div class="row clearfix">
-                                <div class="col-md-2 column cuadroRojo">
+                            <div class="row clearfix recuadroNumeros">
+                                <div class="col-md-2 column cuadrado I">
                                     1
                                 </div>
-                                <div class="col-md-2 column cuadroNaranja">
+                                <div class="col-md-2 column cuadrado II">
                                     2
                                 </div>
-                                <div class="col-md-2 column cuadroAmarillo">
+                                <div class="col-md-2 column cuadrado III">
                                     3
                                 </div>
-                            </div>
-                            <div class="row clearfix">
-                                <div class="col-md-2 column cuadroVerde">
-                                    1
+                                <div class="col-md-2 column cuadrado IV">
+                                    4
                                 </div>
-                                <div class="col-md-2 column cuadroAzul">
-                                    2
+                                <div class="col-md-2 column cuadrado V">
+                                    5
                                 </div>
-                                <div class="col-md-2 column cuadroLila">
-                                    3
+                                <div class="col-md-2 column cuadrado VI">
+                                    6
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-1 column">
-                            <div class="col-md-12 column circuloAzul">
+                            <div class="col-md-12 column circulo III">
                             </div>
-                            <div class="row clearfix">
-                                <div class="col-md-2 column">
+                            <div class="row clearfix recuadroNumeros">
+                                <div class="col-md-2 column cuadrado I">
                                     1
                                 </div>
-                                <div class="col-md-2 column">
+                                <div class="col-md-2 column cuadrado II">
                                     2
                                 </div>
-                                <div class="col-md-2 column">
+                                <div class="col-md-2 column cuadrado III">
                                     3
                                 </div>
-                            </div>
-                            <div class="row clearfix">
-                                <div class="col-md-2 column">
-                                    1
+                                <div class="col-md-2 column cuadrado IV">
+                                    4
                                 </div>
-                                <div class="col-md-2 column">
-                                    2
+                                <div class="col-md-2 column cuadrado V">
+                                    5
                                 </div>
-                                <div class="col-md-2 column">
-                                    3
+                                <div class="col-md-2 column cuadrado VI">
+                                    6
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-1 column">
-                            <div class="col-md-12 column circuloVerde">
+                            <div class="col-md-12 column circulo IV">
                             </div>
-                            <div class="row clearfix">
-                                <div class="col-md-2 column">
+                            <div class="row clearfix recuadroNumeros">
+                                <div class="col-md-2 column cuadrado I">
                                     1
                                 </div>
-                                <div class="col-md-2 column">
+                                <div class="col-md-2 column cuadrado II">
                                     2
                                 </div>
-                                <div class="col-md-2 column">
+                                <div class="col-md-2 column cuadrado III">
                                     3
                                 </div>
-                            </div>
-                            <div class="row clearfix">
-                                <div class="col-md-2 column">
-                                    1
+                                <div class="col-md-2 column cuadrado IV">
+                                    4
                                 </div>
-                                <div class="col-md-2 column">
-                                    2
+                                <div class="col-md-2 column cuadrado V">
+                                    5
                                 </div>
-                                <div class="col-md-2 column">
-                                    3
+                                <div class="col-md-2 column cuadrado VI">
+                                    6
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-1 column">
-                            <div class="col-md-12 column circuloLila">
+                            <div class="col-md-12 column circulo V">
                             </div>
-                            <div class="row clearfix">
-                                <div class="col-md-2 column">
+                            <div class="row clearfix recuadroNumeros">
+                                <div class="col-md-2 column cuadrado I">
                                     1
                                 </div>
-                                <div class="col-md-2 column">
+                                <div class="col-md-2 column cuadrado II">
                                     2
                                 </div>
-                                <div class="col-md-2 column">
+                                <div class="col-md-2 column cuadrado III">
                                     3
                                 </div>
-                            </div>
-                            <div class="row clearfix">
-                                <div class="col-md-2 column">
-                                    1
+                                <div class="col-md-2 column cuadrado IV">
+                                    4
                                 </div>
-                                <div class="col-md-2 column">
-                                    2
+                                <div class="col-md-2 column cuadrado V">
+                                    5
                                 </div>
-                                <div class="col-md-2 column">
-                                    3
+                                <div class="col-md-2 column cuadrado VI">
+                                    6
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-1 column">
-                            <div class="col-md-12 column circuloNaranja">
+                            <div class="col-md-12 column circulo VI">
                             </div>
-                            <div class="row clearfix">
-                                <div class="col-md-2 column">
+                            <div class="row clearfix recuadroNumeros">
+                                <div class="col-md-2 column cuadrado I">
                                     1
                                 </div>
-                                <div class="col-md-2 column">
+                                <div class="col-md-2 column cuadrado II">
                                     2
                                 </div>
-                                <div class="col-md-2 column">
+                                <div class="col-md-2 column cuadrado III">
                                     3
                                 </div>
-                            </div>
-                            <div class="row clearfix">
-                                <div class="col-md-2 column">
-                                    1
+                                <div class="col-md-2 column cuadrado IV">
+                                    4
                                 </div>
-                                <div class="col-md-2 column">
-                                    2
+                                <div class="col-md-2 column cuadrado V">
+                                    5
                                 </div>
-                                <div class="col-md-2 column">
-                                    3
+                                <div class="col-md-2 column cuadrado VI">
+                                    6
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-2 column">
+                        <div class="col-md-2 column recuadroNumJugadas">
                             0
                         </div>
-                        <div class="col-md-5 column">
+                        <div class="col-md-5 column recuadroBoton">
                              <button type="button" class="btn btn-primary btn-lg btn-block active">Empezar a jugar/ Dame pistas</button>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row clearfix">
+            <div class="row clearfix recuadroGeneral">
                 <div class="col-md-12 column">
                     <div class="row clearfix">
                         <div class="col-md-1 column">
-                            Circulo
-                            <div class="row clearfix">
-                                <div class="col-md-2 column">
-                                    1
-                                </div>
-                                <div class="col-md-2 column">
-                                    2
-                                </div>
-                                <div class="col-md-2 column">
-                                    3
-                                </div>
-                            </div>
-                            <div class="row clearfix">
-                                <div class="col-md-2 column">
-                                    1
-                                </div>
-                                <div class="col-md-2 column">
-                                    2
-                                </div>
-                                <div class="col-md-2 column">
-                                    3
-                                </div>
+                            <div class="col-md-12 column circulo no">
                             </div>
                         </div>
                         <div class="col-md-1 column">
-                            Circulo
-                            <div class="row clearfix">
-                                <div class="col-md-2 column">
-                                    1
-                                </div>
-                                <div class="col-md-2 column">
-                                    2
-                                </div>
-                                <div class="col-md-2 column">
-                                    3
-                                </div>
-                            </div>
-                            <div class="row clearfix">
-                                <div class="col-md-2 column">
-                                    1
-                                </div>
-                                <div class="col-md-2 column">
-                                    2
-                                </div>
-                                <div class="col-md-2 column">
-                                    3
-                                </div>
+                            <div class="col-md-12 column circulo no">
                             </div>
                         </div>
                         <div class="col-md-1 column">
-                            Circulo
-                            <div class="row clearfix">
-                                <div class="col-md-2 column">
-                                    1
-                                </div>
-                                <div class="col-md-2 column">
-                                    2
-                                </div>
-                                <div class="col-md-2 column">
-                                    3
-                                </div>
-                            </div>
-                            <div class="row clearfix">
-                                <div class="col-md-2 column">
-                                    1
-                                </div>
-                                <div class="col-md-2 column">
-                                    2
-                                </div>
-                                <div class="col-md-2 column">
-                                    3
-                                </div>
+                            <div class="col-md-12 column circulo no">
                             </div>
                         </div>
                         <div class="col-md-1 column">
-                            Circulo
-                            <div class="row clearfix">
-                                <div class="col-md-2 column">
-                                    1
-                                </div>
-                                <div class="col-md-2 column">
-                                    2
-                                </div>
-                                <div class="col-md-2 column">
-                                    3
-                                </div>
-                            </div>
-                            <div class="row clearfix">
-                                <div class="col-md-2 column">
-                                    1
-                                </div>
-                                <div class="col-md-2 column">
-                                    2
-                                </div>
-                                <div class="col-md-2 column">
-                                    3
-                                </div>
+                            <div class="col-md-12 column circulo no">
                             </div>
                         </div>
                         <div class="col-md-1 column">
-                            Circulo
-                            <div class="row clearfix">
-                                <div class="col-md-2 column">
-                                    1
-                                </div>
-                                <div class="col-md-2 column">
-                                    2
-                                </div>
-                                <div class="col-md-2 column">
-                                    3
-                                </div>
-                            </div>
-                            <div class="row clearfix">
-                                <div class="col-md-2 column">
-                                    1
-                                </div>
-                                <div class="col-md-2 column">
-                                    2
-                                </div>
-                                <div class="col-md-2 column">
-                                    3
-                                </div>
+                            <div class="col-md-12 column circulo no">
                             </div>
                         </div>
-                        <div class="col-md-2 column">
-                            1
+                        <div class="col-md-2 column recuadroNumJugadas2">
+                            0
                         </div>
-                        <div class="col-md-1 column">
-                            Circulo
-                        </div>
-                        <div class="col-md-1 column">
-                            Circulo
-                        </div>
-                        <div class="col-md-1 column">
-                            Circulo
-                        </div>
-                        <div class="col-md-1 column">
-                            Circulo
-                        </div>
-                        <div class="col-md-1 column">
-                            Circulo
+                        <div class="row clearfix recuadroCirculos">
+                            <div class="col-md-1 column">
+                                <div class="col-md-12 column circulo no">
+                                </div>
+                            </div>
+                            <div class="col-md-1 column">
+                                <div class="col-md-12 column circulo no">
+                                </div>
+                            </div>
+                            <div class="col-md-1 column">
+                                <div class="col-md-12 column circulo no">
+                                </div>
+                            </div>
+                            <div class="col-md-1 column">
+                                <div class="col-md-12 column circulo no">
+                                </div>
+                            </div>
+                            <div class="col-md-1 column">
+                                <div class="col-md-12 column circulo no">
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
         </div>
         <script>
             //

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>attributeContainsPrefix demo</title>
+  <style>
+  a {
+    display: inline-block;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+ 
+    <div id="vader">YO SOY TU PADRE</div>  
+    <div id="luc"  padre="vader">LUC</div>
+    <div id="leia" padre="vader">LEIA</div>
+    
+    <!--
+    // Ejemplo original:
+    <a href="example.html" hreflang="en">Some text</a>
+    <a href="example.html" hreflang="en-UK">Some other text</a>
+    <a href="example.html" hreflan="bola1">will not be outlined</a>
+    -->
+    
+<script>
+    //// Ejemplo original:
+    //$( "a[hreflang|='en']" ).css( "border", "3px dotted green" );
+    //$( "a[hreflang]" ).css( "border", "3px dotted green" );
+
+    
+    // Crear mis propias etiquetas y acceder a ellas
+        //http://api.jquery.com/category/selectors/
+        //http://api.jquery.com/attribute-equals-selector/
+    
+    // Manipulación del elemento class:
+        //http://api.jquery.com/category/manipulation/class-attribute/
+    
+    miPadre=$( "#luc[padre]");
+    miPadre.css( "border", "3px dotted green" );
+  
+    
+    if($("#leia[padre]")[0].attributes["padre"].value=="vader"){
+        $("#leia").css( "border", "5px dotted red" );
+    }
+       
+    
+    
+
+</script>
+ 
+</body>
+</html>
